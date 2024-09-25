@@ -7,7 +7,8 @@ Selesaikan langkah-langkah praktikum berikut ini menggunakan DartPad di browser 
 
 Ketik atau salin kode program berikut ke dalam fungsi main().
 
-![img](./image/1.png)
+
+![alt text](../image/1.png)
 
 **Langkah 2:**
 Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan!
@@ -22,7 +23,7 @@ Apa yang terjadi ? Jika terjadi error, silakan perbaiki namun tetap menggunakan 
 Jawab: yang terjadi error karena pada Dart, variabel dengan tipe String tidak bisa langsung digunakan dalam kondisi if, yang mengharapkan ekspresi boolean (bool). Dalam kode , 'test' adalah sebuah String dengan nilai "true", dan Dart tidak secara otomatis mengonversi String menjadi bool.
 
 
-![img](./image/2.png)
+![alt text](../image/2.png)
 
 # Praktikum 2: Menerapkan Perulangan "while" dan "do-while"
 
@@ -38,7 +39,7 @@ Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jela
 
 Jawab: Kode tersebut akan menghasilkan error karena variabel counter belum dideklarasikan sebelum digunakan di dalam perulangan while. Dalam Dart, setiap variabel harus dideklarasikan terlebih dahulu sebelum digunakan.
 
-![img](./image/3.png)
+![alt text](../image/3.png)
 
 **Langkah 3:**
 
@@ -46,7 +47,7 @@ Apa yang terjadi ? Jika terjadi error, silakan perbaiki namun tetap menggunakan 
 
 Jawab: Kode tersebut akan error karena variabel counter belum dideklarasikan atau diinisialisasi sebelum digunakan dalam perulangan do-while. Sama seperti dalam perulangan while, setiap variabel yang digunakan harus dideklarasikan terlebih dahulu.
 
-![img](./image/4.png)
+![alt text](../image/4.png)
 
 # Praktikum 3: Menerapkan Perulangan "for" dan "break-continue"
 
@@ -65,7 +66,7 @@ Jawab: Kode tersebut menghasilkan error karena beberapa masalah dalam perulangan
 1. Inisialisasi variabel index: Variabel index belum dideklarasikan sebelum digunakan.
 2. Inkrementasi: Tidak ada bagian yang mengubah nilai index di dalam perulangan. Dalam perulangan for, biasanya diperlukan inkrementasi (misalnya, index++) untuk mengubah nilai index di setiap iterasi agar loop tidak berjalan terus-menerus.
 
-![img](./image/5.png)
+![alt text](../image/5.png)
 
 **Langkah 3:**
 
@@ -79,7 +80,7 @@ Jawab: Terdapat beberapa masalah dengan kode yang berikan:
 2. Logika pada kondisi else if (index > 1 || index < 7): Kondisi ini akan selalu benar karena menggunakan operator OR (||), yang mana salah satu dari kondisi tersebut (index > 1) akan selalu benar untuk hampir semua nilai index, kecuali index == 1.
 
 
-![img](./image/6.png)
+![alt text](../image/6.png)
 
 # Tugas praktikum
 
@@ -89,8 +90,6 @@ Jawab: Terdapat beberapa masalah dengan kode yang berikan:
 
 jawab:
 
-![image](./image/tugas.png)
-
-![image](.minggu3/image/tugas.png)
+![alt text](../image/tugas.png)
 
 
