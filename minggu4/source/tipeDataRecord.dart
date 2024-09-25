@@ -7,7 +7,14 @@ void main() {
   (int, int) tukar((int, int) record) {
     var (a, b) = record;
     return (b, a);
+
   }
+  // Contoh penggunaan fungsi tukar
+  var intRecord = (3, 7);  // Record berisi dua nilai integer
+  print("Before swap: $intRecord");
+
+  var swappedRecord = tukar(intRecord);  // Menukar nilai
+  print("After swap: $swappedRecord");
 
   // Record type annotation in a variable declaration
   (String, int) mahasiswa;
