@@ -89,6 +89,8 @@ Jawab: Terdapat beberapa masalah dengan kode yang berikan:
 
 jawab:
 
-![img](./image/tugas.png)
+![image](./image/tugas.png)
+
+![image](.minggu3/image/tugas.png)
 
 
