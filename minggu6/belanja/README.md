@@ -7,7 +7,7 @@ A new Flutter project.
 # nama: ikhwandi
 # nim : 2241720028
 # kelas: 3F
-# matkul: Pme
+# matkul: Pemrograman mobile
 
 
 # Praktikum 5: Membangun Navigasi di Flutter
@@ -92,5 +92,6 @@ final itemArgs = ModalRoute.of(context)!.settings.arguments as Item;
 6. Selesaikan Praktikum 5: Navigasi dan Rute tersebut. Cobalah modifikasi menggunakan plugin go_router, lalu dokumentasikan dan push ke repository Anda berupa screenshot setiap hasil pekerjaan beserta penjelasannya di file README.md. Kumpulkan link commit repository GitHub Anda kepada dosen yang telah disepakati!
 
 hasil jadi setelah dilakukan:
+
 ![alt text](assets/images/01.gif)
 
