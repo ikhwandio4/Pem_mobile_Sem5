@@ -4,6 +4,12 @@ A new Flutter project.
 
 ## Getting Started
 
+# nama: ikhwandi
+# nim : 2241720028
+# kelas: 3F
+# matkul: Pme
+
+
 # Praktikum 5: Membangun Navigasi di Flutter
 
 Selesaikan langkah-langkah praktikum berikut ini menggunakan editor Visual Studio Code (VS Code) atau Android Studio atau code editor lain kesukaan Anda. Materi ini dapat dimasukkan ke Laporan Praktikum folder Week atau Pertemuan 06.
