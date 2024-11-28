@@ -263,5 +263,160 @@ Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan co
 ![alt text](lib/images/soal9.png)
 
 
+# Praktikum 6: Menggunakan Future dengan StatefulWidget
+
+Langkah 1: install plugin geolocator
+
+Langkah 2: Tambah permission GPS
+
+Jika Anda menargetkan untuk platform Android, maka tambahkan baris kode berikut di file android/app/src/main/androidmanifest.xml
+
+```dart
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+```
+
+Langkah 3: Buat file geolocation.dart
+
+Langkah 4: Buat StatefulWidget
+Buat class LocationScreen di dalam file geolocation.dart
+
+Langkah 5: Isi kode geolocation.dart
 
 
+Langkah 6: Edit main.dart
+
+Panggil screen baru tersebut di file main Anda seperti berikut.
+
+```dart
+home: LocationScreen(),
+```
+
+Langkah 7: Run
+
+Run project Anda di device atau emulator (bukan browser), maka akan tampil seperti berikut ini.
+
+Langkah 8: Tambahkan animasi loading
+
+
+Soal 12
+Jika Anda tidak melihat animasi loading tampil, kemungkinan itu berjalan sangat cepat. Tambahkan delay pada method getPosition() dengan kode await Future.delayed(const Duration(seconds: 3));
+Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 12".
+
+
+# Praktikum 7: Manajemen Future dengan FutureBuilder
+
+Langkah 1: Modifikasi method getPosition()
+
+Buka file geolocation.dart kemudian ganti isi method dengan kode ini.
+
+Langkah 2: Tambah variabel
+
+Tambah variabel ini di class _LocationScreenState
+
+Langkah 3: Tambah initState()
+
+Tambah method ini dan set variabel position
+
+Langkah 4: Edit method build()
+
+Ketik kode berikut dan sesuaikan. Kode lama bisa Anda comment atau hapus.
+
+Soal 13
+Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 13".
+Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
+
+
+Langkah 5: Tambah handling error
+
+Tambahkan kode berikut untuk menangani ketika terjadi error. Kemudian hot restart.
+```dart
+else if (snapshot.connectionState == ConnectionState.done) {
+  if (snapshot.hasError) {
+     return Text('Something terrible happened!');
+  }
+  return Text(snapshot.data.toString());
+}
+```
+
+Soal 14
+Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 14".
+
+
+# Praktikum 8: Navigation route dengan Future Function
+
+Langkah 1: Buat file baru navigation_first.dart
+
+Buatlah file baru ini di project lib Anda.
+
+Langkah 2: Isi kode navigation_first.dart
+
+Soal 15
+Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+Silakan ganti dengan warna tema favorit Anda.
+
+Langkah 3: Tambah method di class _NavigationFirstState
+
+Tambahkan method ini.
+
+```dart
+Future _navigateAndGetColor(BuildContext context) async {
+   color = await Navigator.push(context,
+        MaterialPageRoute(builder: (context) => const NavigationSecond()),) ?? Colors.blue;
+   setState(() {});
+   });
+}
+```
+
+Langkah 4: Buat file baru navigation_second.dart
+
+Buat file baru ini di project lib Anda. Silakan jika ingin mengelompokkan view menjadi satu folder dan sesuaikan impor yang dibutuhkan.
+
+
+Langkah 5: Buat class NavigationSecond dengan StatefulWidget
+
+Langkah 6: Edit main.dart
+
+Lakukan edit properti home.
+
+```dart
+home: const NavigationFirst(),
+```
+
+Langkah 8: Run
+
+Lakukan run, jika terjadi error silakan diperbaiki.
+
+Soal 16
+Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 16".
+
+
+# Praktikum 9: Memanfaatkan async/await dengan Widget Dialog
+
+Langkah 1: Buat file baru navigation_dialog.dart
+
+Buat file dart baru di folder lib project Anda.
+
+Langkah 2: Isi kode navigation_dialog.dart
+
+Langkah 3: Tambah method async
+
+Langkah 4: Panggil method di ElevatedButton
+
+Langkah 5: Edit main.dart
+
+Ubah properti home
+
+Langkah 6: Run
+
+Coba ganti warna background dengan widget dialog tersebut. Jika terjadi error, silakan diperbaiki. Jika berhasil, akan tampil seperti gambar berikut.
+
+Soal 17
+Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 17".
