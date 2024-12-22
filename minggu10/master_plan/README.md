@@ -1,4 +1,4 @@
-# master_plan
+#  Master_plan
 
 A new Flutter project.
 
@@ -248,12 +248,31 @@ hasil percobaan:
 
 **Tugas Praktikum 1: Dasar State dengan Model-View**
 1. Selesaikan langkah-langkah praktikum tersebut, lalu dokumentasikan berupa GIF hasil akhir praktikum beserta penjelasannya di file README.md! Jika Anda menemukan ada yang error atau tidak berjalan dengan baik, silakan diperbaiki.
+
+jawab: done
+
 2. Jelaskan maksud dari langkah 4 pada praktikum tersebut! Mengapa dilakukan demikian?
+jawab:
+
+* Memudahkan Pemeliharaan: Dalam proyek dengan banyak file, pendekatan ini mengurangi jumlah baris import dan membuat kode lebih terorganisir dan mudah dikelola.
+* Meningkatkan Keterbacaan: Dengan menyediakan satu titik akses, pembaca kode dapat dengan mudah menemukan semua kelas atau fungsi yang diperlukan tanpa kebingungan.
+* Struktur Modular: Ini menerapkan prinsip modular dengan membagi kode ke dalam file-file kecil, namun tetap menjaga kemudahan pengelolaan.
+
 3. Mengapa perlu variabel plan di langkah 6 pada praktikum tersebut? Mengapa dibuat konstanta ?
+
+jawab:
+Variabel plan digunakan sebagai titik referensi untuk data yang diperlukan secara konsisten selama proses berjalan. Dengan menjadikannya sebagai konstanta, nilai plan tetap tidak berubah, sehingga meningkatkan keandalan dan mencegah perubahan yang tidak disengaja pada data.
 4. Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
 ![alt text](lib/images/01.gif)
+
 5. Apa kegunaan method pada Langkah 11 dan 13 dalam lifecyle state ?
+jawab:
+* initState: Inisialisasi variabel scrollController dan menambahkan listener untuk mengelola peristiwa scroll.
+* dispose: Membersihkan sumber daya yang digunakan oleh scrollController saat widget tidak lagi digunakan.
+
+
 6. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
+jawab: done
 
 
 
@@ -409,13 +428,36 @@ hasil:
 
 **Tugas Praktikum 2: InheritedWidget**
 1. Selesaikan langkah-langkah praktikum tersebut, lalu dokumentasikan berupa GIF hasil akhir praktikum beserta penjelasannya di file README.md! Jika Anda menemukan ada yang error atau tidak berjalan dengan baik, silakan diperbaiki sesuai dengan tujuan aplikasi tersebut dibuat.
+
+jawab: done
+
 2. Jelaskan mana yang dimaksud InheritedWidget pada langkah 1 tersebut!
 Mengapa yang digunakan InheritedNotifier?
+
+jawab: 
+
+Dalam kode tersebut, InheritedNotifier<ValueNotifier> digunakan karena:
+
+Data yang Dinamis: Objek ValueNotifier memungkinkan data Plan untuk berubah, dan setiap perubahan akan secara otomatis memicu pembaruan (rebuild) pada widget yang bergantung padanya.
+Pendengaran Perubahan Otomatis: Dengan menggunakan InheritedNotifier, perubahan pada ValueNotifier akan secara otomatis terdeteksi oleh widget terkait (melalui PlanProvider.of(context)), sehingga widget tersebut dapat melakukan rebuild tanpa perlu mekanisme tambahan. Hal ini lebih efisien dibandingkan InheritedWidget biasa yang tidak memiliki fitur bawaan untuk melacak perubahan pada data yang dapat diubah.
+
+
 3. Jelaskan maksud dari method di langkah 3 pada praktikum tersebut! Mengapa dilakukan demikian?
+
+jawab:
+
+1. completedCount: Menghitung jumlah tugas yang telah selesai dengan memfilter tugas yang memiliki complete == true, lalu mengembalikan hasilnya. Hal ini memungkinkan informasi jumlah tugas selesai diakses dengan mudah tanpa perlu menghitung ulang setiap saat.
+
+2. completenessMessage: Menghasilkan pesan status seperti “3 out of 5 tasks” dengan menampilkan jumlah tugas selesai dari total tugas. Ini memudahkan penyajian progres secara langsung di antarmuka pengguna (UI).
+
+Kedua getter ini meningkatkan efisiensi akses data dan secara otomatis memperbarui status saat daftar tugas mengalami perubahan.
 4. Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
 
 ![alt text](lib/images/02.gif)
+
 5. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
+
+jawab: done
 
 
 # Praktikum 3: Membuat State di Multiple Screens
@@ -715,11 +757,22 @@ hasil percobaan:
 **Tugas Praktikum 3: State di Multiple Screens**
 
 1. Selesaikan langkah-langkah praktikum tersebut, lalu dokumentasikan berupa GIF hasil akhir praktikum beserta penjelasannya di file README.md! Jika Anda menemukan ada yang error atau tidak berjalan dengan baik, silakan diperbaiki sesuai dengan tujuan aplikasi tersebut dibuat.
+
+jawab:done
+
 2. Berdasarkan Praktikum 3 yang telah Anda lakukan, jelaskan maksud dari gambar diagram berikut ini!
 ![alt text](lib/images/image3.png)
 
+jawab: jadi terdapat plan creator dan plan screen,plan creator digunakan untuk menambahkan plan baru, sedangkan plan screen digunakan untuk menampilkan plan yang telah ditambahkan oleh user.
+
 3. Lakukan capture hasil dari Langkah 14 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
+
+jawab: 
+pada langkah 14 kita membuat suatu fungsi untuk menampilkan daftar rencana dan memungkinkan pengguna melihat detail lebih lanjut dengan mengetuk item.
+
 4. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
+
+jawab:done
 
 
 
