@@ -680,7 +680,29 @@ import 'package:flutter/rendering.dart' show ViewportOffset;
 
 
 1. Selesaikan Praktikum 1 dan 2, lalu dokumentasikan dan push ke repository Anda berupa screenshot setiap hasil pekerjaan beserta penjelasannya di file README.md! Jika terdapat error atau kode yang tidak dapat berjalan, silakan Anda perbaiki sesuai tujuan aplikasi dibuat!
+
+jawab:done 
+
 2. Gabungkan hasil praktikum 1 dengan hasil praktikum 2 sehingga setelah melakukan pengambilan foto, dapat dibuat filter carouselnya!
+
+jawab: 
+![alt text](images/03.gif)
+
+
 3. Jelaskan maksud void async pada praktikum 1?
+
+jawab:
+void digunakan sebagai tipe pengembalian (return type) dari sebuah fungsi. Dalam hal ini, void menandakan bahwa fungsi tersebut tidak mengembalikan nilai apapun. Misalnya, jika sebuah fungsi bertipe void, maka kamu tidak dapat menulis return di dalamnya karena fungsi tersebut tidak mengharapkan nilai balik. async:
+
+async menunjukkan bahwa fungsi tersebut akan menjalankan operasi asynchronous, yaitu operasi yang mungkin memerlukan waktu untuk selesai (misalnya mengambil data dari internet, membaca file, atau melakukan proses yang membutuhkan waktu). Dengan menambahkan async, fungsi ini akan mengembalikan Future, meskipun tipe pengembaliannya ditulis void. Fungsi async biasanya memuat operasi asynchronous, seperti await , yang memungkinkan eksekusi kode berjalan tidak secara berurutan tetapi dapat menunggu hingga operasi tertentu selesai sebelum melanjutkan.
+
 4. Jelaskan fungsi dari anotasi @immutable dan @override ?
+
+jawab:
+@immutable: Digunakan untuk kelas yang tidak boleh memiliki properti yang bisa diubah, biasanya pada widget stateless. @override: Digunakan untuk menandakan bahwa metode atau properti di suatu kelas sedang mengganti versi yang ada di superclass, membantu dalam validasi penulisan kode.
+
+
 5. Kumpulkan link commit repository GitHub Anda kepada dosen yang telah disepakati!
+
+jawab:done
+

@@ -1,6 +1,5 @@
-import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'dart:io';
+import 'package:camera/camera.dart';
 import 'package:kamera_flutter/widget/displaypicture_screen.dart';
 
 class TakePictureScreen extends StatefulWidget {
@@ -39,14 +38,13 @@ class TakePictureScreenState extends State<TakePictureScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Take a picture ikhwandi 2241720028')),
+      appBar: AppBar(title: const Text('Take a picture')),
       body: FutureBuilder<void>(
         future: _initializeControllerFuture,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             return Column(
               children: [
-                // Display the camera preview
                 Expanded(child: CameraPreview(_controller)),
               ],
             );
@@ -56,31 +54,21 @@ class TakePictureScreenState extends State<TakePictureScreen> {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        // Provide an onPressed callback.
         onPressed: () async {
-          // Take the Picture in a try / catch block. If anything goes wrong,
-          // catch the error.
           try {
-            // Ensure that the camera is initialized.
             await _initializeControllerFuture;
-
-            // Attempt to take a picture and get the file path
             final image = await _controller.takePicture();
 
             if (!context.mounted) return;
 
-            // If the picture was taken, display it on a new screen.
             await Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => DisplayPictureScreen(
-                  // Pass the automatically generated path to
-                  // the DisplayPictureScreen widget.
                   imagePath: image.path,
                 ),
               ),
             );
           } catch (e) {
-            // If an error occurs, log the error to the console.
             print(e);
           }
         },
